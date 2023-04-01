@@ -130,7 +130,7 @@ Please refer to default values for `colors` and `highlights` in
 
 ## 🍭 Extras
 
-Extra color configs for **iTerm** [extras](extras/). It is easy to create color config for any other terminal emulator since only a few colors are [used](lua/neology).
+Extra color configs for **iTerm** [extras](extras/). It is easy to create color config for any other terminal emulator since only a few colors are [used](lua/neology/colors.lua).
 
 
 # Credits
