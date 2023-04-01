@@ -1,6 +1,6 @@
 # Neology 
 
-A simple colortheme for neovim suitable for coding. It uses font shading and font variation to achieve contrast, and eschews distracting colors (except for diagnostics and UI). I found that colors do not convey any additional information, especially if used inconsistently. It is written in Lua with Treesitter support. Best used with fonts that support true *italic* letters -- like IBM Plex Mono, Operator Mono, Victor Mono, Jetbrains Mono, etc. These fonts have distinct cursive style for *italic* letters, unlike most  fonts with faux italics where regular font is slanted to achieve italic effect.
+A simple colortheme for neovim suitable for coding. It uses font shading and font variation to achieve contrast, and eschews distracting colors (except for diagnostics and UI). I found that colors do not convey any additional information, especially if used inconsistently. It is written in Lua with Treesitter support. Best used with fonts that support true *italic* letters -- like *IBM Plex Mono*, *Operator Mono*, *Victor Mono*, *Jetbrains Mono*, etc. These fonts have distinct cursive style for *italic* letters, unlike most  fonts with faux italics where regular font is slanted to achieve italic effect.
 
 ## Screenshots
 
