@@ -125,12 +125,12 @@ require("neology").setup({
 ## 🪓 Overriding Colors & Highlight Groups
 
 Please refer to default values for `colors` and `highlights` in 
-(lua/neology/colors.lua) and (lua/neology/theme.lua). Use the `highlighs` option passed to setup() function (above) to override color and style values. 
+[colors](lua/neology/colors.lua) and [themes](lua/neology/theme.lua). Use the `highlighs` option passed to setup() function (above) to override color and style values. 
 
 
 ## 🍭 Extras
 
-Extra color configs for **iTerm** [extras](extras/). It is easy to create color config for any other terminal emulator since only a few colors are [used](lua/neology/colors.lua).
+Extra color configs for **iTerm** [extras](extras/). It is easy to create color config for any other terminal emulator since only a few colors are [used](lua/neology).
 
 
 # Credits
