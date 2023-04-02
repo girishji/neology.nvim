@@ -104,7 +104,6 @@ Neology will use the default options, unless you call `setup`.
 require("neology").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
-  theme = "dark", -- The theme comes in two styles, `dark` and `light`
   highlights = {
     -- You can override specific highlight groups, either to use other colors
     --   link to another group
@@ -127,6 +126,3 @@ Please refer to default values for `colors` and `highlights` in
 Extra color configs for **iTerm** [extras](extras/). It is easy to create color config for any other terminal emulator since only a few colors are [used](lua/neology/colors.lua).
 
 
-# Credits
-
-Based on the [komau](https://github.com/ntk148v/komau.vim) theme.
