@@ -48,7 +48,7 @@ use 'girishji/neology.nvim'
 
 ```lua
 require("lazy").setup({
-  { "girishji/neology.nvim", opts = { } },
+  { "girishji/neology.nvim" },
 })
 ```
 
@@ -98,11 +98,7 @@ require('lualine').setup {
 > `colorscheme neology`
 The theme comes in two styles, `dark`and `light`.
 
-The **dark** style will be used if:
-
-- `{ theme = "dark"}` was passed to `setup(options)`
-
-TokyoNight will use the default options, unless you call `setup`.
+Neology will use the default options, unless you call `setup`.
 
 ```lua
 require("neology").setup({
