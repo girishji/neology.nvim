@@ -14,8 +14,8 @@ local c = {
 M.normal = {
   a = { bg = c.green, fg = colors.norm, gui = 'bold' },
   b = { bg = colors.bg_very_subtle, fg = colors.norm },
-  c = { bg = colors.bg_bg, fg = colors.norm_subtle },
-  -- x = { bg = colors.bg_very_very_subtle, fg = colors.norm_subtle },
+  c = { bg = colors.bg, fg = colors.norm_subtle },
+  x = { bg = colors.bg_very_very_subtle, fg = colors.norm_subtle },
 }
 
 M.insert = {
