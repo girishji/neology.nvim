@@ -4,12 +4,13 @@ local colors = require("neology.colors").setup()
 local M = {}
 
 local c = {
-  copper = "#7b4e32",
-  green = "#255244",
-  silver = "#957e5f",
+  copper  = "#7b4e32",
+  green   = "#255244",
+  silver  = "#957e5f",
   magenta = "#903a59",
-  yellow = "#7d7600",
-  blue = "#85aff5"
+  yellow  = "#7d7600",
+  blue    = "#85aff5",
+  purple  = "#c6a2f1",
 }
 
 M.normal = {
@@ -28,7 +29,7 @@ M.command = {
 }
 
 M.visual = {
-  a = { bg = c.copper, fg = colors.bg, gui = 'bold' },
+  a = { bg = c.yellow, fg = colors.bg, gui = 'bold' },
 }
 
 M.replace = {
