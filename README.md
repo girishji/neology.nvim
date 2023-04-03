@@ -116,8 +116,6 @@ Neology will use the default options, unless you call `setup`.
 
 ```lua
 require("neology").setup({
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
   highlights = {
     -- You can override specific highlight groups, either to use other colors
     --   link to another group
