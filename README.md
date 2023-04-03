@@ -8,7 +8,7 @@ To understand code one has to follow the logical flow as defined by variables an
 
 ## Screenshot
 
-![image](https://raw.githubusercontent.com/girishji/neology.nvim/main/screenshots/pic.jpeg)
+![image](https://raw.githubusercontent.com/girishji/neology.nvim/main/screenshots/pic.png)
 
 
 ## ✨ Features
