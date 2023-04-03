@@ -1,10 +1,10 @@
 local M = {}
 
 function M.setup(opts)
-  local c = require('neology.colors').setup(opts)
+  local c = require('neology.colors').setup()
 
   local highlights = {
-    Normal                    = { bg = c.bg, fg = c.fg },  -- base (default) highlight gr to resort to
+    Normal                    = { bg = c.bg, fg = c.norm }, -- base (default) highlight gr to resort to
     ColorColumn               = { bg = c.mute4 },
     Comment                   = { fg = c.mute3, gui = 'italic' },
     Conditional               = { fg = c.mute2 },
@@ -26,7 +26,7 @@ function M.setup(opts)
     -- Function                  = { fg = c.fg, gui = 'italic' },
     Identifier                = { fg = c.fg },
     Ignore                    = { fg = c.bg },
-    IncSearch                 = { bg = c.mute2, fg = c.bg },
+    IncSearch                 = { fg = c.bg, bg = c.mute1 },
     Include                   = { fg = c.mute2 },
     Keyword                   = { fg = c.mute2, gui = 'italic' },
     LineNr                    = { fg = c.mute4 },
@@ -42,7 +42,7 @@ function M.setup(opts)
     PreProc                   = { fg = c.mute1 },
     Question                  = { fg = c.red },
     Repeat                    = { fg = c.mute2 },
-    Search                    = { bg = c.mute1, fg = c.bg, gui = 'bold' },
+    Search                    = { bg = c.mute5, gui = 'bold' },
     SignColumn                = { fg = c.green },
     Special                   = { fg = c.fg, gui = 'italic' },
     SpecialKey                = { fg = c.green },
@@ -66,7 +66,7 @@ function M.setup(opts)
     Typedef                   = { link = 'Type' },
     Underlined                = { fg = c.mute1, gui = 'underline' },
     VertSplit                 = { bg = c.mute6, fg = c.mute6 },
-    Visual                    = { fg = c.mute1, bg = c.mute5 },
+    Visual                    = { fg = c.fg, bg = c.mute5 },
     VisualNOS                 = { bg = c.mute4 },
     WarningMsg                = { bg = c.mute5, fg = c.yellow },
     WildMenu                  = { fg = c.bg, bg = c.mute1 },
@@ -79,14 +79,14 @@ function M.setup(opts)
     ToolbarButton             = { bg = c.mute2, fg = c.bg },
     --
     -- Set specific Treesitter node tags
-    ["@conditional"]          = { link = 'Conditonal' },  -- 'if'
+    ["@conditional"]          = { link = 'Conditonal' }, -- 'if'
     ["@include"]              = { link = 'Include' },
     ["@keyword"]              = { link = 'Keyword' },
     ["@operator"]             = { link = 'Operator' },
     ["@punctuation"]          = { link = 'Delimiter' },
     ["@punctuation.bracket"]  = { link = 'Delimiter' },
     -- ["@punctuation.special"]  = { link = 'Delimiter' },
-    ["@repeat"]               = { link = 'Repeat' },  -- 'for' loop
+    ["@repeat"]               = { link = 'Repeat' }, -- 'for' loop
     ["@string"]               = { link = 'String' },
     ["@type"]                 = { link = 'Type' },
     ["@type.qualifier"]       = { link = 'Type' },

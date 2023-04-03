@@ -1,5 +1,5 @@
 local options = require("neology").options
-local colors = require("neology.colors").setup(options)
+local colors = require("neology.colors").setup()
 
 local M = {}
 
