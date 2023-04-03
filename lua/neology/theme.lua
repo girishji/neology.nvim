@@ -171,6 +171,9 @@ function M.setup(opts)
     -- lualine
     -- lualine_y_buffers_active   = { fg = c.mute1 },
     -- lualine_y_buffers_inactive = { fg = c.mute5 },
+    -- Lazy
+    LazyProgressDone          = { gui = 'bold', fg = c.pink },
+    LazyProgressTodo          = { gui = 'bold', fg = c.yellow },
   }
 
   if opts and opts.highlights then
