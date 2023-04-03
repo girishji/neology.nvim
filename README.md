@@ -2,9 +2,16 @@
 
 A dark colortheme for [Neovim](https://neovim.io/) suitable for coding. It uses font variation and shading  to achieve contrast, and eschews distracting colors (except for diagnostics and UI). I found that colors do not convey any additional information, especially if used inconsistently. It is written in Lua with Treesitter support. Best used with fonts that support true *italic* letters -- like *IBM Plex Mono*, *Operator Mono*, *Victor Mono*, *Jetbrains Mono*, etc. These fonts have distinct cursive style for *italic* letters, unlike most fonts with faux italics where regular font is slanted to achieve italic effect.
 
-Why so few colors?
+*Why so few colors?*
 
-To understand code one has to follow the logical flow as defined by variables and functions (objects and messages/methods). These highlight groups are given primary color. Second group consists of operators, types, keywords, and the like that provide the scaffolding. These groups are muted by a step but still readable. The last group are UI elements like line numbers, cursor line, and such, and they are muted even further. To the last group belongs parenthesis. Italics are used where appropriate to provide even more contrast.
+To understand code is to understand the flow of logic contained within the
+interaction of variables and functions (methods). In OOP paralance it is about
+objects and messages passed between them. Hence the highlight groups pertaining
+to these tokens are given prominance. Secondary highlight groups consist of
+operators, types, keywords, parenthesis, and the like. These groups are muted
+by a step but still readable. The last group are UI elements like line numbers
+and they are muted even further. Italics are used where appropriate to provide
+contrast.
 
 ## Screenshot
 
