@@ -1,6 +1,10 @@
 # Neology
 
-A dark colortheme for [Neovim](https://neovim.io/) suitable for coding. It uses font shading and font variation to achieve contrast, and eschews distracting colors (except for diagnostics and UI). I found that colors do not convey any additional information, especially if used inconsistently. It is written in Lua with Treesitter support. Best used with fonts that support true *italic* letters -- like *IBM Plex Mono*, *Operator Mono*, *Victor Mono*, *Jetbrains Mono*, etc. These fonts have distinct cursive style for *italic* letters, unlike most  fonts with faux italics where regular font is slanted to achieve italic effect.
+A dark colortheme for [Neovim](https://neovim.io/) suitable for coding. It uses font variation and shading  to achieve contrast, and eschews distracting colors (except for diagnostics and UI). I found that colors do not convey any additional information, especially if used inconsistently. It is written in Lua with Treesitter support. Best used with fonts that support true *italic* letters -- like *IBM Plex Mono*, *Operator Mono*, *Victor Mono*, *Jetbrains Mono*, etc. These fonts have distinct cursive style for *italic* letters, unlike most fonts with faux italics where regular font is slanted to achieve italic effect.
+
+Why so few colors?
+
+To understand code one has to follow the logical flow as defined by variables and functions (objects and messages/methods). These highlight groups are given primary color. Second group consists of operators, types, keywords, and the like that provide the scaffolding. These groups are muted by a step but still readable. The last group are UI elements like line numbers, cursor line, and such, and they are muted even further. To the last group belongs parenthesis. Italics are used where appropriate to provide even more contrast.
 
 ## Screenshot
 
