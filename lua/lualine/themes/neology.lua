@@ -9,13 +9,14 @@ local c = {
   silver = "#957e5f",
   magenta = "#903a59",
   yellow = "#7d7600",
+  blue = "#85aff5"
 }
 
 M.normal = {
-  a = { bg = c.green, fg = colors.norm, gui = 'bold' },
-  b = { bg = colors.bg_very_subtle, fg = colors.norm },
-  c = { bg = colors.bg, fg = colors.norm_subtle },
-  x = { bg = colors.bg_very_very_subtle, fg = colors.norm_subtle },
+  a = { bg = c.green, fg = colors.mute1, gui = 'bold' },
+  b = { bg = colors.statusline1, fg = colors.mute1 },
+  c = { bg = colors.statusline2, fg = colors.mute1 },
+  -- y = { fg = colors.mute2, gui = 'italic' },
 }
 
 M.insert = {
@@ -40,9 +41,9 @@ M.terminal = {
 
 -- inactive when there are split windows
 M.inactive = {
-  a = { bg = colors.bg, fg = colors.bg_med_subtle },
-  b = { bg = colors.bg, fg = colors.bg_med_subtle, gui = 'bold' },
-  c = { bg = colors.bg, fg = colors.bg_med_subtle },
+  a = { bg = colors.bg, fg = colors.mute2 },
+  b = { bg = colors.bg, fg = colors.mute2, gui = 'bold' },
+  c = { bg = colors.bg, fg = colors.mute2 },
 }
 
 return M
