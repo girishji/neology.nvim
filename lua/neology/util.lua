@@ -10,10 +10,12 @@ function M.highlight(group, hl)
       hl.underline = true
     elseif hl.gui == 'undercurl' then
       hl.undercurl = true
-      -- elseif hl.gui == 'NONE' then
-      --   hl = {}
+    elseif hl.gui == 'NONE' then
+      hl = {}
     end
-    hl.gui = nil
+    if hl.gui then
+      hl.gui = nil
+    end
   end
   vim.api.nvim_set_hl(0, group, hl)
 end
