@@ -38,7 +38,7 @@ function M.setup(opts)
     Pmenu                      = { fg = c.fg_overlay1, bg = c.bg_overlay1 },
     PmenuSel                   = { fg = c.fg, bg = c.bg_overlay2 },
     PmenuSbar                  = { bg = c.bg_overlay2 }, -- scrollbar
-    PmenuThumb                 = { bg = c.bg_overlay3 }, -- thumb of scrollbar
+    PmenuThumb                 = { bg = c.fg_overlay5 }, -- thumb of scrollbar
     PreProc                    = { fg = c.fg_overlay1 },
     Question                   = { fg = c.fg_red },
     Repeat                     = { fg = c.fg_overlay1 },
@@ -177,6 +177,10 @@ function M.setup(opts)
     -- Lazy
     LazyProgressDone           = { gui = 'bold', fg = c.fg_primary },
     LazyProgressTodo           = { gui = 'bold', fg = c.fg_yellow },
+    -- nvim-cmp
+    -- CmpIterAbbr
+    CmpItemAbbrMatch           = { fg = c.fg_primary },
+    CmpItemAbbrMatchFuzzy      = { gui = 'bold' },
   }
 
   if opts and opts.highlights then
