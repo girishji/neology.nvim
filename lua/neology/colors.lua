@@ -72,16 +72,17 @@ local palette = {
     },
   },
   --
-  blue_gray = {
+  indigo = {
     bg = {
       bg = '#1e1e2e',
       bg_overlay0 = "#282939", --cursorline
-      bg_overlay1 = '#263238',
-      bg_overlay2 = '#37474F',
-      bg_overlay3 = '#455A64',
+      bg_overlay1 = '#282939',
+      bg_overlay2 = '#35364c',
+      bg_overlay3 = '#4f5179',
       bg_primary = '#007e65',
     },
     fg = {
+      -- TODO indo color does not go with the primary color
       fg = '#ddd7d1',
       fg_overlay1 = '#aab2cc',
       fg_overlay2 = '#aab2cc',
@@ -92,13 +93,27 @@ local palette = {
       fg_overlay4 = '#484f63',
       fg_overlay5 = '#484f63',
       fg_primary = '#7AC5B5',
-      -- fg = '#e7eef9',
-      -- fg_overlay1 = '#a8b8ca',
-      -- fg_overlay2 = '#a8b8ca',
-      -- fg_overlay3 = '#70879f',
-      -- fg_overlay4 = '#70879f',
-      -- fg_overlay5 = '#4b647c',
-      -- fg_primary = '#7AC5B5',
+    },
+  },
+  --
+  blue_gray = {
+    bg = {
+      bg = '#1e1e2e',
+      bg_overlay0 = "#282939", --cursorline
+      bg_overlay1 = '#282939',
+      bg_overlay2 = '#35364c',
+      bg_overlay3 = '#4f5179',
+      bg_primary = '#007e65',
+    },
+    fg = {
+      -- material.io
+      fg = '#cfd8dc',
+      fg_overlay1 = '#a8b8ca',
+      fg_overlay2 = '#a8b8ca',
+      fg_overlay3 = '#70879f',
+      fg_overlay4 = '#546E7A',
+      fg_overlay5 = '#484f63',
+      fg_primary = '#7AC5B5',
     },
   },
   --
@@ -144,39 +159,12 @@ local palette = {
   },
 }
 
-local get_palette = function(hue)
-  local c = palette[hue]
-  local colors = {
-    red         = '#F48FB1',
-    yellow      = '#FFF59D',
-    green       = '#80cbc4',
-    purple      = '#CE93D8',
-    blue        = '#9FA8DA',
-    cursorline  = c.cursorline,
-    statusline1 = c.statusline1,
-    -- statusline2 = c.statusline2,
-    statusline2 = c.bg,
-    bg          = c.bg,
-    fg          = c.saturation[1],
-    bg_overlay1 = c.saturation[10],
-    bg_overlay2 = c.saturation[9],
-    bg_overlay3 = c.saturation[8],
-    bg_overlay4 = c.saturation[7],
-    fg_overlay1 = c.saturation[2],
-    fg_overlay2 = c.saturation[3],
-    fg_overlay3 = c.saturation[4],
-    fg_overlay4 = c.saturation[5],
-    fg_overlay5 = c.saturation[6],
-  }
-  colors = vim.tbl_extend('force', colors, c)
-  colors.statusline2 = c.bg
-  return colors
-end
-
 
 function M.setup()
-  local theme = 'blue_gray'
+  -- local theme = 'blue_gray'
+  local theme = 'indigo'
   -- local theme = 'cool_gray'
+  -- local theme = 'pure_gray'
   -- local theme = 'tricolor'
   -- local theme = 'warm_gray'
   local colors = vim.tbl_extend('force', {}, palette.basic_colors)
