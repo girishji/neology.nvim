@@ -13,16 +13,16 @@ local palette = {
     fg_red    = '#EF9A9A',
     fg_yellow = '#FFF59D',
     bg_yellow = '#F57F17',
-    fg_green  = '#80cbc4',
     fg_orange = '#FFCC80',
+    fg_green  = '#80cbc4',
     fg_brown  = '#BCAAA4',
     bg_brown  = '#4E342E',
     fg_purple = '#CE93D8',
     bg_purple = '#6A1B9A',
     fg_blue   = '#80DEEA',
     bg_blue   = '#006064',
-    fg_gray   = '#B0BEC5',
-    bg_gray   = '#455A64',
+    fg_lime   = '#c3eda9',
+    fg_coral  = '#e9c8a9',
   },
   tricolor = {
     bg = {
@@ -62,9 +62,10 @@ local palette = {
       bg_primary = '#007e65',
     },
     fg = {
-      fg = '#e6ded6',
-      fg_overlay1 = '#C5C5C5',
-      fg_overlay2 = '#909090',
+      -- fg = '#e6ded6',
+      fg = '#ddd7d1',
+      fg_overlay1 = '#a8a8a8',
+      fg_overlay2 = '#a8a8a8',
       fg_overlay3 = '#909090',
       fg_overlay4 = '#484f63',
       fg_overlay5 = '#424242',
@@ -162,9 +163,9 @@ local palette = {
 
 function M.setup()
   -- local theme = 'blue_gray'
-  local theme = 'indigo'
+  -- local theme = 'indigo'
   -- local theme = 'cool_gray'
-  -- local theme = 'pure_gray'
+  local theme = 'pure_gray'
   -- local theme = 'tricolor'
   -- local theme = 'warm_gray'
   local colors = vim.tbl_extend('force', {}, palette.basic_colors)
