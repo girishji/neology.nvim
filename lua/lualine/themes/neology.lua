@@ -1,50 +1,38 @@
-local options = require("neology").options
-local colors = require("neology.colors").setup()
+local c = require("neology.colors").setup()
 
 local M = {}
 
-local c = {
-  copper  = "#7b4e32",
-  green   = "#255244",
-  silver  = "#957e5f",
-  magenta = "#903a59",
-  yellow  = "#7d7600",
-  blue    = "#85aff5",
-  purple  = "#c6a2f1",
-}
-
 M.normal = {
-  a = { bg = c.green, fg = colors.mute1, gui = 'bold' },
-  b = { bg = colors.statusline1, fg = colors.mute1 },
-  c = { bg = colors.statusline2, fg = colors.mute1 },
-  -- y = { fg = colors.mute2, gui = 'italic' },
+  a = { bg = c.bg_primary, fg = c.fg, gui = 'bold' },
+  b = { bg = c.bg, fg = c.fg_primary },
+  c = { bg = c.bg, fg = c.fg_overlay3 },
 }
 
 M.insert = {
-  a = { bg = c.yellow, fg = colors.bg, gui = 'bold' },
+  a = { bg = c.bg_yellow, fg = c.fg, gui = 'bold' },
 }
 
 M.command = {
-  a = { bg = c.silver, fg = colors.bg, gui = 'bold' },
+  a = { bg = c.bg_purple, fg = c.fg, gui = 'bold' },
 }
 
 M.visual = {
-  a = { bg = c.yellow, fg = colors.bg, gui = 'bold' },
+  a = { bg = c.bg_green, fg = c.fg, gui = 'bold' },
 }
 
 M.replace = {
-  a = { bg = c.magenta, fg = colors.bg, gui = 'bold' },
+  a = { bg = c.bg_blue, fg = c.fg, gui = 'bold' },
 }
 
 M.terminal = {
-  a = { bg = c.magenta, fg = colors.bg, gui = 'bold' },
+  a = { bg = c.bg_green, fg = c.fg, gui = 'bold' },
 }
 
 -- inactive when there are split windows
 M.inactive = {
-  a = { bg = colors.bg, fg = colors.mute2 },
-  b = { bg = colors.bg, fg = colors.mute2, gui = 'bold' },
-  c = { bg = colors.bg, fg = colors.mute2 },
+  a = { bg = c.bg, fg = c.fg_overlay3 },
+  b = { bg = c.bg, fg = c.fg_overlay3 },
+  c = { bg = c.bg, fg = c.fg_overlay3 },
 }
 
 return M
