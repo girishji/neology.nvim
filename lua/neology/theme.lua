@@ -1,3 +1,6 @@
+-- Help:
+--   :hi {groupname}
+
 local M = {}
 
 function M.setup(opts)
@@ -12,7 +15,7 @@ function M.setup(opts)
     Cursor                     = { bg = c.bg_primary },
     CursorColumn               = { bg = c.bg_overlay1 },
     CursorLine                 = { bg = c.bg_overlay0 },
-    CursorLineNr               = { fg = c.fg_overlay1, bg = c.bg_overlay0, gui = 'bold' },
+    CursorLineNr               = { fg = c.fg_overlay2, bg = c.bg_overlay0 },
     Delimiter                  = { fg = c.fg_overlay2 },
     DiffAdd                    = { fg = c.fg_green },
     DiffChange                 = { fg = c.fg_yellow },
@@ -54,7 +57,7 @@ function M.setup(opts)
     StatusLine                 = { bg = c.bg_overlay1, fg = c.fg_overlay1 },
     StatusLineNC               = { bg = c.bg, fg = c.fg_overlay4 },
     StorageClass               = { link = 'Type' },
-    String                     = { fg = c.fg_overlay1, gui = 'italic' },
+    String                     = { fg = c.fg, gui = 'italic' },
     Structure                  = { link = 'Type' },
     TabLine                    = { fg = c.fg_overlay1, bg = c.bg_overlay1 },
     TabLineFill                = { fg = c.fg_overlay1, bg = c.bg_overlay2 },
@@ -66,7 +69,9 @@ function M.setup(opts)
     -- Type                       = { fg = c.fg_overlay1, gui = 'italic' },
     Typedef                    = { link = 'Type' },
     Underlined                 = { gui = 'underline' },
-    VertSplit                  = { bg = c.bg_overlay1, fg = c.bg_overlay1 },
+    -- VertSplit                  = { bg = c.bg_overlay1, fg = c.bg_overlay1 },
+    VertSplit                  = { bg = c.bg, fg = c.fg_primary },
+    WinSeparator               = { link = 'VertSplit' },
     Visual                     = { fg = c.fg, bg = c.bg_overlay2 },
     VisualNOS                  = { bg = c.bg_overlay2 },
     WarningMsg                 = { fg = c.fg_yellow },
@@ -78,6 +83,8 @@ function M.setup(opts)
     StatusLineTermNC           = { fg = c.bg, bg = c.bg_primary },
     ToolbarLine                = { bg = c.fg_overlay1, fg = c.bg },
     ToolbarButton              = { bg = c.fg_overlay1, fg = c.bg },
+    NormalFloat                = { bg = c.bg, fg = c.fg_overlay1 },
+    FloatBorder                = { bg = c.bg, fg = c.bg_overlay3 },
     --
     -- Set specific Treesitter node tags
     ["@conditional"]           = { link = 'Conditional' }, -- 'if'
@@ -127,7 +134,7 @@ function M.setup(opts)
     SyntasticErrorSign         = { fg = c.fg_red },
     SyntasticError             = { bg = c.fg_red, fg = c.white, gui = 'bold' },
     -- which-key.nvim
-    WhichKey                   = { bg = c.bg, fg = c.fg_primary, gui = 'bold' },
+    WhichKey                   = { bg = c.bg, fg = c.fg_primary },
     WhichKeyDesc               = { bg = c.bg, fg = c.fg },
     WhichKeySeparator          = { bg = c.bg, fg = c.fg },
     WhichKeyFloat              = { bg = c.bg, fg = c.fg },
@@ -188,6 +195,8 @@ function M.setup(opts)
     -- CmpIterAbbr
     CmpItemAbbrMatch           = { fg = c.fg_primary },
     CmpItemAbbrMatchFuzzy      = { gui = 'bold' },
+    -- Telescope
+    TelescopeBorder            = { link = 'FloatBorder' },
   }
 
   if opts and opts.highlights then

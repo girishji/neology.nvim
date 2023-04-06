@@ -62,14 +62,15 @@ local palette = {
       bg_primary = '#007e65',
     },
     fg = {
-      -- fg = '#e6ded6',
       fg = '#ddd7d1',
-      -- fg_overlay1 = '#b9b9b9',
-      fg_overlay1 = '#a8a8a8',
-      fg_overlay2 = '#a8a8a8',
+      -- fg = '#e2d8cd', -- more beige and bright
+      fg_overlay1 = '#b8b8b8',
+      fg_overlay2 = '#b8b8b8',
+      -- fg_overlay1 = '#cbcfdf', -- bluish
+      -- fg_overlay2 = '#cbcfdf',
       fg_overlay3 = '#909090',
-      fg_overlay4 = '#757575',
-      fg_overlay5 = '#424242',
+      fg_overlay4 = '#909090',
+      fg_overlay5 = '#757575',
       fg_primary = '#7AC5B5',
     },
   },
