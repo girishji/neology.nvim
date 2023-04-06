@@ -53,6 +53,7 @@ local palette = {
   },
   --
   default = {
+    -- pure gray
     bg = {
       bg = '#1e1e2e',
       bg_overlay0 = "#282939", --cursorline
@@ -64,13 +65,15 @@ local palette = {
     fg = {
       fg = '#ddd7d1',
       -- fg = '#e2d8cd', -- more beige and bright
-      fg_overlay1 = '#b8b8b8',
-      fg_overlay2 = '#b8b8b8',
+      -- fg_overlay1 = '#b8b8b8', -- gray but brighter
+      -- fg_overlay2 = '#b8b8b8',
+      fg_overlay1 = '#a0a0a0',
+      fg_overlay2 = '#a0a0a0',
       -- fg_overlay1 = '#cbcfdf', -- bluish
       -- fg_overlay2 = '#cbcfdf',
       fg_overlay3 = '#909090',
       fg_overlay4 = '#909090',
-      fg_overlay5 = '#757575',
+      fg_overlay5 = '#505050',
       fg_primary = '#7AC5B5',
     },
   },
