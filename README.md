@@ -1,17 +1,15 @@
 # Neology
 
-A dark colortheme for [Neovim](https://neovim.io/) suitable for coding. It uses font variation and shading  to achieve contrast, and eschews distracting colors (except for diagnostics and UI). I found that colors do not convey any additional information, especially if used inconsistently. It is written in Lua with Treesitter support. Best used with fonts that support true *italic* letters -- like *IBM Plex Mono*, *Operator Mono*, *Victor Mono*, *Jetbrains Mono*, etc. These fonts have distinct cursive style for *italic* letters, unlike most fonts with faux italics where regular font is slanted to achieve italic effect.
+Remove the clutter to reveal the essential.
 
-*Why so few colors?*
+A dark colortheme for [Neovim](https://neovim.io/) suitable for coding. It uses
+font variation and shading to achieve contrast, and eschews distracting colors
+(except for diagnostics and UI). I found that colors do not convey any
+additional information, especially if used inconsistently. 
 
-To understand code is to understand the flow of logic contained within the
-interaction of variables and functions (methods). In OOP paralance it is about
-objects and messages passed between them. Hence the highlight groups pertaining
-to these tokens are given prominance. Secondary highlight groups consist of
-operators, types, keywords, parenthesis, and the like. These groups are muted
-by a step but still readable. The last group are UI elements like line numbers
-and they are muted even further. Italics are used where appropriate to provide
-contrast.
+It is written in Lua with adequate Treesitter support. Best used with fonts
+that support true *italic* letters -- like *IBM Plex Mono*, *Operator Mono*,
+*Victor Mono*, *Jetbrains Mono*, etc.
 
 ## Screenshot
 
@@ -85,8 +83,10 @@ To enable the `neology` theme from `lazy.nvim`:
 ```lua
  -- ... your lazy.nvim config
   {
-    "girishji/neology.vim",
-      config = function()
+    "girishji/neology.nvim",
+    priority = 1000,
+    config = function()
+      -- require 'neology'.setup({ theme = 'default' }) -- default/warm/cool
       vim.cmd.colorscheme 'neology'
     end,
   },  
@@ -110,12 +110,12 @@ require('lualine').setup {
 
 > ❗️ configuration needs to be set **BEFORE** loading the color scheme with
 > `colorscheme neology`
-The theme comes in two styles, `dark`and `light`.
 
 Neology will use the default options, unless you call `setup`.
 
 ```lua
 require("neology").setup({
+  theme = 'default', -- default/warm/cool
   highlights = {
     -- You can override specific highlight groups, either to use other colors
     --   link to another group

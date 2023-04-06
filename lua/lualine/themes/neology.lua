@@ -1,4 +1,4 @@
-local c = require("neology.colors").setup()
+local c = require("neology.colors").setup({})
 
 local M = {}
 

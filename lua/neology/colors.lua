@@ -52,7 +52,7 @@ local palette = {
     },
   },
   --
-  pure_gray = {
+  default = {
     bg = {
       bg = '#1e1e2e',
       bg_overlay0 = "#282939", --cursorline
@@ -99,7 +99,7 @@ local palette = {
     },
   },
   --
-  blue_gray = {
+  blue = {
     bg = {
       bg = '#1e1e2e',
       bg_overlay0 = "#282939", --cursorline
@@ -120,7 +120,7 @@ local palette = {
     },
   },
   --
-  cool_gray = {
+  cool = {
     bg = {
       bg = '#1c2025',          -- bg color : overlay #121212 with font color at 8% opacity
       bg_overlay0 = "#272d35", --cursorline
@@ -141,7 +141,7 @@ local palette = {
     },
   },
   --
-  warm_gray = {
+  warm = {
     bg = {
       bg = '#241f1d',
       bg_overlay0 = "#2D2920",
@@ -163,16 +163,11 @@ local palette = {
 }
 
 
-function M.setup()
-  -- local theme = 'blue_gray'
-  -- local theme = 'indigo'
-  -- local theme = 'cool_gray'
-  local theme = 'pure_gray'
-  -- local theme = 'tricolor'
-  -- local theme = 'warm_gray'
+function M.setup(opts)
+  local theme_colors = palette[opts.theme] and palette[opts.theme] or palette['default']
   local colors = vim.tbl_extend('force', {}, palette.basic_colors)
-  colors = vim.tbl_extend('force', colors, palette[theme].fg)
-  colors = vim.tbl_extend('force', colors, palette[theme].bg)
+  colors = vim.tbl_extend('force', colors, theme_colors.fg)
+  colors = vim.tbl_extend('force', colors, theme_colors.bg)
   return colors
 end
 

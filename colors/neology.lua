@@ -1,1 +1,1 @@
-require("neology").setup()
+require("neology").run()
